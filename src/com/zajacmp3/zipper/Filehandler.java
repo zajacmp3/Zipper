@@ -41,10 +41,13 @@ public class Filehandler {
 		}
 		Mysqlconnector mysql = new Mysqlconnector();
 		String url = "jdbc:sqlite:D:\\testdb.db";
-		String usr = "mzajac2";
-		String pass = "206366";
+		String usr = "";
+		String pass = "";
 		String cmd = "select * from dziennikarz";
 		ResultSet resultset = mysql.mysqlconnector(url, usr, pass, cmd);
+		while(resultset.next()){
+			//TODO czytanie danych
+		}
 	}
 
 }
