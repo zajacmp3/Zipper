@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.zajacmp3.mysqlconnector.Mysqlconnector;
+import com.zajacmp3.mysqlconnector.Sqliteconnector;
 
 public class Filehandler {
 
@@ -13,9 +13,9 @@ public class Filehandler {
 	 * @throws SQLException 
 	 * @throws ClassNotFoundException 
 	 */
-	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	public static void filehandler(String[] args) throws ClassNotFoundException, SQLException {
 		if(args.length < 3){
-			System.out.println("To few arguments... Why I am writing this in english?");
+			System.out.println("To few arguments...");
 		}
 		else{
 			if(args[2].equalsIgnoreCase("zip")){
@@ -39,15 +39,15 @@ public class Filehandler {
 				System.out.println("Unknown option is wrong - use 'zip' or 'unzip'");
 			}
 		}
-		Mysqlconnector mysql = new Mysqlconnector();
-		String url = "jdbc:sqlite:D:\\testdb.db";
-		String usr = "";
-		String pass = "";
-		String cmd = "select * from dziennikarz";
-		ResultSet resultset = mysql.mysqlconnector(url, usr, pass, cmd);
+
+		
+		
+/*		Mysqlconnector mysql = new Mysqlconnector(url);
+*/		
+/*		ResultSet resultset = mysql.mysqlconnector(url, usr, pass, cmd);
 		while(resultset.next()){
 			//TODO czytanie danych
-		}
+		}*/
 	}
 
 }
