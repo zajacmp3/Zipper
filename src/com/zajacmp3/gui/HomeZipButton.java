@@ -4,15 +4,15 @@ import java.awt.Dimension;
 
 import javax.swing.JButton;
 
-public class HomeSourceButton extends JButton {
+public class HomeZipButton extends JButton {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1941469644718599712L;
 	
-	public HomeSourceButton() {
-		setText("Click");
+	public HomeZipButton() {
+		setText("Zip!");
 		setPreferredSize(new Dimension(100, 20));
 	}
 

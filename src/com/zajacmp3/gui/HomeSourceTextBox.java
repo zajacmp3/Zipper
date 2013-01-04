@@ -15,9 +15,9 @@ public class HomeSourceTextBox extends JTextField {
 		
 
 		setMinimumSize(d);
-		setColumns(10);
+		setColumns(25);
 		setEnabled(true);
-		setText("Text");
+		setText("Filepath...");
 		
 		setVisible(true);
 		

@@ -29,13 +29,16 @@ public class Home extends JFrame{
 		
 		addComponents();
 		
+		revalidate();
+		repaint();
+		
 	}
 	
 	public void addComponents(){
 		setJMenuBar(new MenuBar());
 		
 		GridBagConstraints gbc = new GridBagConstraints();
-		gbc.anchor = GridBagConstraints.CENTER;
+		gbc.anchor = GridBagConstraints.NORTH;
 		gbc.weightx = gbc.weighty = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 
