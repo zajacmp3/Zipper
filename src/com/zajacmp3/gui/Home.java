@@ -17,6 +17,7 @@ public class Home extends JFrame{
 	private static final long serialVersionUID = -4069090877848717372L;
 
 	public Dimension d = new Dimension(600, 300);
+	public HomeSourcePanel hsp = new HomeSourcePanel();
 	
 	public Home(){
 		setSize(d);
@@ -42,7 +43,7 @@ public class Home extends JFrame{
 		gbc.weightx = gbc.weighty = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 
-		getContentPane().add(new HomeSourcePanel(), gbc);
+		getContentPane().add(hsp, gbc);
 	}
 	
 	public Home(String text){

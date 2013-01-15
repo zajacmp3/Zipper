@@ -8,7 +8,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 public class Unzipper {
-	public void unzip(String args[]) throws IOException{
+	public static void unzip(String args[]) throws IOException{
 		System.out.println("Unzipping");
 		File plik = new File(args[0]); //Source file
 		FileInputStream fin = new FileInputStream(plik);
@@ -17,13 +17,13 @@ public class Unzipper {
 		ZipEntry ze = zin.getNextEntry();
 		String name = ze.getName();
 
-		FileOutputStream fout = new FileOutputStream(new File(args[1]+"unzipped"+name));
+		FileOutputStream fout = new FileOutputStream(new File(args[1]));
 		byte[] buffer = new byte[1024];
 		int read = 0;
 		System.out.println(name);
 		while((read = zin.read(buffer)) !=-1){
-			Szyfrowanie szyfrowanie = new Szyfrowanie();
-			buffer = szyfrowanie.odszyfrowanie(buffer);
+			//Szyfrowanie szyfrowanie = new Szyfrowanie();
+			//buffer = szyfrowanie.odszyfrowanie(buffer);
 			fout.write(buffer, 0, read);
 		}
 		zin.closeEntry();

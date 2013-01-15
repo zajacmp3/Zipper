@@ -15,6 +15,8 @@ public class HomeSourcePanel extends JPanel {
 	 */
 	private static final long serialVersionUID = 1722107479469910143L;
 	public Dimension d = new Dimension(600, 50);
+	public HomeSourceTextBox hstb = new HomeSourceTextBox(this);
+	public String s = "test";
 	
 
 	public HomeSourcePanel() {
@@ -29,12 +31,12 @@ public class HomeSourcePanel extends JPanel {
 		gbc.anchor = GridBagConstraints.WEST;
 		gbc.weightx = gbc.weighty = 1;
 		gbc.insets = new Insets(10, 10, 10, 10);
-		add(new HomeSourceTextBox(),gbc);
+		add(hstb,gbc);
 		
 		gbc.anchor = GridBagConstraints.EAST;
 		gbc.weightx = gbc.weighty = 0;
-		add(new HomeZipButton(),gbc);
+		add(new HomeZipButton(this),gbc);
 		
-		add(new HomeUnzipButton(),gbc);
+		add(new HomeUnzipButton(this),gbc);
 	}
 }

@@ -7,7 +7,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 
-class Zipper {
+public class Zipper {
 
 	/**
 	 * @param args
@@ -15,7 +15,7 @@ class Zipper {
 	 */
 	public static void zipper(String[] args) throws IOException {
 
-		File outputfile = new File(args[1]+"zip.zip");
+		File outputfile = new File(args[1]+".zip");
 		File inputfile = new File(args[0]);
 		FileOutputStream fout = new FileOutputStream(outputfile);
 		ZipOutputStream zout = new ZipOutputStream(fout);
@@ -27,8 +27,8 @@ class Zipper {
 		int lenght;
 		while((lenght = fin.read(buffer)) >0){
 			System.out.println("writing...");
-			Szyfrowanie szyfrowanie = new Szyfrowanie();
-			buffer = szyfrowanie.szyfrowanie(buffer);
+			//Szyfrowanie szyfrowanie = new Szyfrowanie();
+			//buffer = szyfrowanie.szyfrowanie(buffer);
 			zout.write(buffer, 0, lenght);
 		}
 		zout.closeEntry();

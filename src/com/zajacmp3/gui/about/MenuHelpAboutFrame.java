@@ -16,6 +16,7 @@ public class MenuHelpAboutFrame extends JFrame{
 		setTitle("About");
 		setSize(500,150);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setAlwaysOnTop(true);
 		setVisible(true);
 		
 		setLayout(new GridBagLayout());		
